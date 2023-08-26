@@ -1,3 +1,8 @@
 --Api Testi ve Swagger
 Tema eklemesi
 Register - Login 
+
+Onay Bekliyor 
+Onaylandý
+Ýptal Edildi
+Bekletiliyor
