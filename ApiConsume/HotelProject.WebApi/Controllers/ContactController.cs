@@ -29,6 +29,12 @@ namespace HotelProject.WebApi.Controllers
             _contactService.TInsert(contact);
             return Ok();
         }
+        [HttpGet("{id}")]
+        public IActionResult GetSendMessage(int id)
+        {
+            var value = _contactService.TGetByID(id);
+            return Ok(value);
+        }
         //[HttpDelete("{id}")]
         //public IActionResult DeleteContact(int id)
         //{
@@ -47,6 +53,6 @@ namespace HotelProject.WebApi.Controllers
         //    _contactService.TUpdate(contact);
         //    return Ok();
         //}
-        
+
     }
 }
