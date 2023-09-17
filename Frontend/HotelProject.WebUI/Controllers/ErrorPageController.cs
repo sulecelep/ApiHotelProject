@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace HotelProject.WebUI.Controllers
 {
     [AllowAnonymous]
-    public class RoomController : Controller
+    public class ErrorPageController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Error404()
         {
             return View();
         }
