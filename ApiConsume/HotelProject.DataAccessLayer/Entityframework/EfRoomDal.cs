@@ -15,5 +15,13 @@ namespace HotelProject.DataAccessLayer.Entityframework
         public EfRoomDal(Context context) : base(context)
         {
         }
+
+        public int RoomCount()
+        {
+            using var context = new Context();
+
+            return context.Rooms.Count();
+
+        }
     }
 }
