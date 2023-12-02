@@ -52,23 +52,41 @@ namespace HotelProject.WebApi.Controllers
             var value = _bookingService.TGetByID(id);
             return Ok(value);
         }
-        [HttpPut("UpdateReservationStatus")]
-        public IActionResult UpdateReservationStatus(Booking booking)
-        {
-            _bookingService.TBookingStatusChangeApproved(booking);
-            return Ok();
-        }
-        [HttpPut("UpdateReservationStatusApproved")]
-        public IActionResult UpdateReservationStatusApproved(int id)
-        {
-            _bookingService.TBookingStatusChangeApproved2(id);
-            return Ok();
-        }
+        //[HttpPut("UpdateReservationStatus")]
+        //public IActionResult UpdateReservationStatus(Booking booking)
+        //{
+        //    _bookingService.TBookingStatusChangeApproved(booking);
+        //    return Ok();
+        //}
+        //[HttpPut("UpdateReservationStatusApproved")]
+        //public IActionResult UpdateReservationStatusApproved(int id)
+        //{
+        //    _bookingService.TBookingStatusChangeApproved2(id);
+        //    return Ok();
+        //}
         [HttpGet("Last6Booking")]
         public IActionResult Last6Booking()
         {
             var value = _bookingService.TLast6Bookings();
             return Ok(value);
+        }
+        [HttpGet("BookingApproved/{id}")]
+        public IActionResult BookingApproved(int id)
+        {
+            _bookingService.TBookingStatusChangeApproved3(id);
+            return Ok();
+        }
+        [HttpGet("BookingCancelled/{id}")]
+        public IActionResult BookingCancelled(int id)
+        {
+            _bookingService.TBookingStatusChangeCancelled(id);
+            return Ok();
+        }
+        [HttpGet("BookingWait/{id}")]
+        public IActionResult BookingWait(int id)
+        {
+            _bookingService.TBookingStatusChangeWait(id);
+            return Ok();
         }
     }
 }
