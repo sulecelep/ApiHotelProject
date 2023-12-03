@@ -2,8 +2,8 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title text-center text-primary text-uppercase">Rezervasyon Paneli</h6>
-            <h1 class="mb-5">Odanızı Hemen <span class="text-primary text-uppercase">Rezerve Edin</span></h1>
+            <h6 class="section-title text-center text-primary text-uppercase">Rezervasyon PANELİ</h6>
+            <h1 class="mb-5">Odanızı Hemen <span class="text-primary text-uppercase">Rezerve EDİN</span></h1>
         </div>
         <div class="row g-5">
             <div class="col-lg-6">
@@ -39,24 +39,40 @@
                                     <label for="email">Mail Adresiniz</label>
                                 </div>
                             </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" asp-for="City" placeholder="Şehir">
+                                    <label for="text">Şehir</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" asp-for="Country" placeholder="Ülke">
+                                    <label for="text">Ülke</label>
+                                </div>
+                            </div>
+
                             <div class="col-md-6">
                                 <div class="form-floating date" id="date3" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" asp-for="Checkin" placeholder="Giriş Tarihi" data-target="#date3" data-toggle="datetimepicker" />
+                                    <input type="date" class="form-control datetimepicker-input" asp-for="Checkin" placeholder="Giriş Tarihi"  />
                                     <label for="checkin">Giriş Tarihi</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating date" id="date4" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" asp-for="Checkout" placeholder="Çıkış Tarihi" data-target="#date4" data-toggle="datetimepicker" />
+                                    <input type="date" class="form-control datetimepicker-input" asp-for="Checkout" placeholder="Çıkış Tarihi"  />
                                     <label for="checkout">Çıkış Tarihi</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <select class="form-select" id="select1" asp-for="AdultCount">
-                                        <option value="1">Yetişkin 1</option>
-                                        <option value="2">Yetişkin 2</option>
-                                        <option value="3">Yetişkin 3</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
                                     </select>
                                     <label for="select1">Yetişkin Sayısı</label>
                                 </div>
@@ -64,9 +80,12 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <select class="form-select" id="select2" asp-for="ChildCount">
-                                        <option value="1">Çocuk 1</option>
-                                        <option value="2">Çocuk 2</option>
-                                        <option value="3">Çocuk 3</option>
+                                        <option value="0">Yok</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
                                     </select>
                                     <label for="select2">Çocuk Sayısı</label>
                                 </div>
@@ -74,9 +93,9 @@
                             <div class="col-12">
                                 <div class="form-floating">
                                     <select class="form-select" id="select3" asp-for="RoomCount">
-                                        <option value="1">Oda 1</option>
-                                        <option value="2">Oda 2</option>
-                                        <option value="3">Oda 3</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
                                     </select>
                                     <label for="select3">Oda Sayısı</label>
                                 </div>

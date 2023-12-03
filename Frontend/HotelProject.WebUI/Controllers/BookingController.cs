@@ -36,7 +36,10 @@ namespace HotelProject.WebUI.Controllers
             var responseMessage = await client.PostAsync("http://localhost:5057/api/Booking", stringcontent);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index","Default");
+                TempData["SuccessMessage"] = "Tebrikler! Rezervasyon talebiniz başarıyla kaydedilmiştir. Onay işlemleri için sizinle en kısa sürede sizinle iletişime geçilecektir.";
+
+                //ViewBag.message = "Tebrikler! Rezervasyon talebiniz başarıyla kaydedilmiştir. Onay işlemleri için sizinle en kısa sürede sizinle iletişime geçilecektir.";
+                return RedirectToAction("Index","Booking");
             }
             return View();
         }

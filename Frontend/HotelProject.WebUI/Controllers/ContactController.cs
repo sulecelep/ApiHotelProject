@@ -52,7 +52,9 @@ namespace HotelProject.WebUI.Controllers
             var responseMessage = await client.PostAsync("http://localhost:5057/api/Contact", stringcontent);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index", "Default");
+                TempData["SuccessMessage"] = "Mesajınız başarıyla iletilmiştir, bizimle iletişime geçtiğiniz için Teşekkür Ederiz!";
+
+                return RedirectToAction("Index", "Contact");
             }
             return View();
         }

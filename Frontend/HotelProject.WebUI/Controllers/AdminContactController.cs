@@ -49,6 +49,9 @@ namespace HotelProject.WebUI.Controllers
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<ResultSendboxDto>>(jsonData);
+
+                //var values = JsonConvert.DeserializeObject<List<InboxContactDto>>(jsonData);
+                
                 return View(values);
             }
             return View();
